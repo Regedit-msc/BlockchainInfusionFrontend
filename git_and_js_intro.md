@@ -16,4 +16,4 @@ Git is a Version control System that runs locally on your PC. Bacically it keeps
 
 - `git remote add <remote name> <remote url>`: This tells git to add a remote which you can push changes to subsequently alongside the versions (Basically copies your folder alongside the versions that git has on tyour local machine and keeps them online so you can use later haowever you like).
 
-- `git log`: See all your versions.
+- `git log`: See all your versions of your folder changes.
