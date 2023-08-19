@@ -85,12 +85,11 @@ Fisrt off, JavaScript is not Java. JavaScript is an interpreted language that **
 
 ##### STRUCTURES
 
-- `Comment`: This is used to explain or hide code from the interpreter.Bacically anything **commented out** is not regarded as valid code by the interpreter.
-
+- `Comment`: This is used to explain or hide code from the interpreter. Bacically anything **commented out** is not regarded as valid code by the interpreter.
 
 - `Variables`: This are used as temporary stores of data for our code.
 
-  In JavaScript we have two ways of declearing variables.
+  In JavaScript we have two mainstream ways of declaring variables.
 
   - `const`: Used for **constant** variables that do not change (only mutable for _object_ data types).
 
@@ -104,15 +103,13 @@ Fisrt off, JavaScript is not Java. JavaScript is an interpreted language that **
 
 - `subtraction`: This is denoted by **-** sign, used to subtract numbers.
 
-- `multiplication`: This is denoted by __*__ sign, used to multiply numbers.
+- `multiplication`: This is denoted by **\*** sign, used to multiply numbers.
 
+- `division`: This is denoted by **/** sign, used to divide numbers.
 
-- `division`: This is denoted by __/__ sign, used to divide numbers.
+- `assignment`: This is denoted by **=** sign, used to assign a value to a **variable**.
 
-
-- `assignment`: This is denoted by __=__ sign, used to assign a value to a __variable__.
-
-- `equality`: This is denoted by __==__ sign, used to determine if two values are equal (P.S does not do strict equal or deep equal use `===` for strict equal).
+- `equality`: This is denoted by **==** sign, used to determine if two values are equal (P.S does not do strict equal or deep equal use `===` for strict equal).
 
 #### EXAMPLES:
 
@@ -123,16 +120,134 @@ name = "Ayo"; // This will error.
 let name1 = "Ayomide";
 name1 = "Samuel"; // This will not error;
 
-
 // This is a comment
 
 // FUNCTION
 // It takes in two parameters firstNumber and secondNumber
-function addTwoNumbers(firstNumber, secondNumber){
-    console.log(firstNumber + secondNumber); // console.log() is used to output to the console the content of the parenthesis.
+function addTwoNumbers(firstNumber, secondNumber) {
+  console.log(firstNumber + secondNumber); // console.log() is used to output to the console the content of the parenthesis.
 }
 
 addTwoNumbers(2, 4); // This is the act of invoking a function.
 addTwoNumbers(2, 3); // This is the act of invoking a function.
 ```
 
+#### LOOPS IN JAVASCRIPT
+
+##### What is a Loop?
+
+A **Loop** is exactly what you think it is, basically it's something that runs **repeatedly** given a **certain condition**. In JavaScript we have two kinds of loops mainly. **for** and **while** (P.S we have various derivatives of these loops in `for...in`,` for...of`, etc.).
+
+##### FOR
+
+```js
+// ANATOMY
+
+for (initialState; condition; whatToDoAfterEachIteration) {
+  // What To do If the condition is true.
+}
+
+// EXAMPLE
+const myNumber = 10;
+for (let initialValue = 0; initialValue < myNumber; initialValue++) {
+  console.log(initialValue);
+}
+
+// P.S
+//  myNumber--  is the same as myNumber = myNumber - 1;
+// initialValue++ is the same as initialValue = initialValue + 1;
+```
+
+##### WHILE
+
+```js
+// ANATOMY
+
+while (condition) {
+  // What To do If the condition is true.
+}
+
+// EXAMPLE
+// This will keep running until the process is terminated
+while (1 < 2) {
+  console.log("Yes it is");
+}
+
+const myNumber = 10;
+let initialValue = 0;
+while (initialValue < myNumber) {
+  console.log(initialValue);
+  initialValue++;
+}
+```
+
+##### CONTROL FLOW IN JAVASCRIPT
+
+We have four major ways of handling control flow in JavaScript using some **keywords** which are `if`, `else`, `else if`, `switch`;
+
+```js
+// ANATOMY
+if (condition) {
+  // If condition is true
+}
+
+// EXAMPLE
+if (6 > 5) {
+  console.log("yes");
+}
+
+// ANATOMY
+if (condition) {
+  // If condition is true
+} else {
+  // Run this if condition is not true
+}
+
+// EXAMPLE
+if (6 > 7) {
+  console.log("yes");
+} else {
+  console.log("no");
+}
+
+// ANATOMY
+if (condition) {
+  // If condition is true
+} else if (condition) {
+  // Will be checked if the condition in `if` is not true.
+} else {
+  // Run this if none of the conditions is true.
+}
+
+// EXAMPLE
+if (6 > 7) {
+  console.log("yes");
+} else if (9 > 8) {
+  console.log("yes");
+} else {
+  console.log("no");
+}
+
+// ANATOMY
+switch (value) {
+  case condition:
+    break;
+  default:
+    break;
+}
+
+
+// EXAMPLE
+let gender = "preferNotToSay";
+switch (gender) {
+  case "male":
+    console.log("male");
+    break;
+  case "preferNotToSay":
+    console.log("preferNotToSay");
+    break;
+  default:
+    console.log("female");
+    break;
+}
+```
